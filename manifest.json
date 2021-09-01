@@ -1,0 +1,21 @@
+{
+  "name": "iframe Killer Extension",
+  "action": {},
+  "version": "1.0",
+  "description": "iframe Killer Extension",
+  "externally_connectable": {
+    "matches": ["*://localhost/*"]
+  },
+  "manifest_version": 3,
+  "permissions": ["activeTab", "scripting"],
+  "background": {
+    "service_worker": "serviceWorker.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://localhost/*"],
+      "js": ["./src/handleLastIframe.js"],
+      "run_at": "document_start"
+    }
+  ]
+}

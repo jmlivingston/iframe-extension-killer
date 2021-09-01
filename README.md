@@ -1,3 +1,3 @@
-# Dev Extension
+# iframe Killer Extension
 
-Dev Extension - Various helper functions for developers.
+Kills random iframes that take over screen.
